@@ -9,8 +9,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="dev.lampart.bartosz.sudokuchampions.MainActivity">
 
-    <TextView
+    <dev.lampart.bartosz.sudokuchampions.view.SudokuGridView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/sudokuGridView"
+        android:numColumns="9"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"/>
 </RelativeLayout>
