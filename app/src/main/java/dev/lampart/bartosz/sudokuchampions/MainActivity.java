@@ -12,10 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int[][] Sudoku = SudokuGenerator.getInstance().generateGrid();
-        GameEngine.getInstance().setSudoku(Sudoku);
-
-        printSudoku(Sudoku);
+        GameEngine.getInstance().createGrid(this);
     }
 
     private void printSudoku(int Sudoku[][]) {
