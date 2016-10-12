@@ -1,12 +1,10 @@
-package dev.lampart.bartosz.sudokuchampions.view;
+package dev.lampart.bartosz.sudokuchampions.view.sudokugrid;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.util.AttributeSet;
-import android.view.View;
 
 /**
  * Created by bartek on 10.10.2016.
@@ -37,8 +35,10 @@ public class SudokuCell extends BaseSudokuCell {
         Rect bounds = new Rect();
         mPaint.getTextBounds(String.valueOf(getValue()), 0, String.valueOf(getValue()).length(), bounds);
 
-        canvas.drawText(String.valueOf(getValue()), (getWidth() - bounds.width())/2,
-                (getHeight() + bounds.height())/2, mPaint);
+        if (getValue() != 0) {
+            canvas.drawText(String.valueOf(getValue()), (getWidth() - bounds.width()) / 2,
+                    (getHeight() + bounds.height()) / 2, mPaint);
+        }
     }
 
     private void drawLines(Canvas canvas) {

@@ -2,8 +2,7 @@ package dev.lampart.bartosz.sudokuchampions;
 
 import android.content.Context;
 
-import dev.lampart.bartosz.sudokuchampions.view.GameGrid;
-import dev.lampart.bartosz.sudokuchampions.view.SudokuGridView;
+import dev.lampart.bartosz.sudokuchampions.view.sudokugrid.GameGrid;
 
 /**
  * Created by bartek on 10.10.2016.
@@ -27,6 +26,7 @@ public class GameEngine {
 
     public void createGrid(Context context) {
         int[][] Sudoku = SudokuGenerator.getInstance().generateGrid();
+        Sudoku = SudokuGenerator.getInstance().removeElements(Sudoku, 30);
         grid = new GameGrid(context);
         grid.setGrid(Sudoku);
 

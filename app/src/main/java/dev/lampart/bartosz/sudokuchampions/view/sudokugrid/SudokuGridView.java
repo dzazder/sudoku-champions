@@ -1,4 +1,4 @@
-package dev.lampart.bartosz.sudokuchampions.view;
+package dev.lampart.bartosz.sudokuchampions.view.sudokugrid;
 
 import android.app.Activity;
 import android.content.Context;

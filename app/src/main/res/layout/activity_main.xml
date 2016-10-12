@@ -9,11 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="dev.lampart.bartosz.sudokuchampions.MainActivity">
 
-    <dev.lampart.bartosz.sudokuchampions.view.SudokuGridView
+    <dev.lampart.bartosz.sudokuchampions.view.sudokugrid.SudokuGridView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sudokuGridView"
         android:numColumns="9"
         android:horizontalSpacing="0dp"
         android:verticalSpacing="0dp"/>
+    
+    <dev.lampart.bartosz.sudokuchampions.view.buttonsgrid.ButtonsGridView
+        android:id="@+id/buttonGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sudokuGridView"></dev.lampart.bartosz.sudokuchampions.view.buttonsgrid.ButtonsGridView>
 </RelativeLayout>
